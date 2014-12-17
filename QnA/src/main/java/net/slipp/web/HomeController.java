@@ -11,7 +11,7 @@ public class HomeController {
 
 	@RequestMapping("/")
 	public String home() {
-		log.debug("template!!");
+//		log.debug("template!!");
 		return "home";
 	}
 }
