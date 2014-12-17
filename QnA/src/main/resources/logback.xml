@@ -8,6 +8,8 @@
 	</appender>
 
 	<logger name="net.slipp" level="DEBUG" />
+	
+	<logger name="org.springframwork" lever="INFO"/>
 
 	<root level="INFO">
 		<appender-ref ref="STDOUT" />
