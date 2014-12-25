@@ -1,24 +1,23 @@
-package net.slipp.di;
+package net.slipp.support;
 
-import net.slipp.web.users.UserController;
+import static org.junit.Assert.assertNotNull;
+
+import javax.sql.DataSource;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration("classpath:/di.xml")
-public class MessageRendererTest {
+@ContextConfiguration("classpath:/applicationContext.xml")
+public class ApplicationContextTest {
 	@Autowired
-	private MessageRenderer messageRenderer;
+	private DataSource dataSource;
 	
 	@Test
-	public void renderer() {
-		messageRenderer.render();
+	public void dataSource() {
+		assertNotNull(dataSource);
 	}
-
 }
